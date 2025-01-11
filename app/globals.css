@@ -19,3 +19,12 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.container {
+  perspective: 1000px; /* Adds depth to the 3D flip */
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
