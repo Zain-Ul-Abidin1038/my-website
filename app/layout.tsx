@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import './globals.css'; // Ensure Tailwind CSS is imported
 import Link from 'next/link';
 
