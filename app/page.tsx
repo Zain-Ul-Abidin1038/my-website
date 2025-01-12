@@ -31,7 +31,7 @@ const Home = () => {
       </video>
 
       {/* Content Over the Video */}
-      <div className="container mx-auto text-center relative z-10">
+      <div className="container mx-auto text-center top-[-140px] relative z-10">
         <motion.h1
           className="text-5xl font-bold mb-4"
           initial={{ opacity: 0, y: -50 }}
