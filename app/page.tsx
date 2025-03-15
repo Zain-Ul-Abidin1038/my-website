@@ -13,7 +13,7 @@ const Home = () => {
 
   // Add Parallax Effect to Background
   const { scrollY } = useScroll();
-  const backgroundY = useTransform(scrollY, [0, 500], ["0%", "-80%"]); // Moves slightly slower for parallax
+  const backgroundY = useTransform(scrollY, [0, 500], ["0%", "-20%"]); // Moves slightly slower for parallax
 
   useEffect(() => {
     setIsClient(true);
@@ -24,10 +24,6 @@ const Home = () => {
   return (
     <section ref={heroRef} className="relative text-white py-96 overflow-hidden">
       {/* Fixed Background Video (Always stays in place) */}
-      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0">
-        <source src="/background.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
 
       {/* Parallax Scrolling Background Video */}
       <motion.video
@@ -38,7 +34,7 @@ const Home = () => {
         className="absolute inset-0 w-full h-full object-cover z-0"
         style={{ y: backgroundY }}
       >
-        <source src="/background-parallax.mp4" type="video/mp4" />
+        <source src="/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </motion.video>
 
