@@ -4,16 +4,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-
-// Custom hook for scroll shrink and parallax effect
-export function useScrollShrink(targetRef: React.RefObject<HTMLDivElement>, minScale: number = 0.85) {
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start start", "end start"],
-  });
-
-  return useTransform(scrollYProgress, [0, 1], [1, minScale]);
-}
+import { useScrollShrink } from "@/hooks/useScrollShrink"; // Import the hook
 
 const Home = () => {
   const [isClient, setIsClient] = useState(false);
